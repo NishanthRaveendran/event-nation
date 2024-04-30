@@ -4,8 +4,8 @@ export default authMiddleware({
     publicRoutes: [
         '/',
         '/events/:id',
-        '/api/webhooks/clerk',
-        '/api/webhooks/stripe',
+        '/api/webhook/clerk',
+        '/api/webhook/stripe',
         '/api/uploadthing',
         '/assets/images/dotted-pattern.png',
         '/assets/images/hero.png',
@@ -13,8 +13,8 @@ export default authMiddleware({
         '/assets/images/logo.svg'
     ],
     ignoredRoutes: [
-        '/api/webhooks/clerk',
-        '/api/webhooks/stripe',
+        '/api/webhook/clerk',
+        '/api/webhook/stripe',
         '/api/uploadthing'
     ]
 });
