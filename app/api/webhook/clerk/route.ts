@@ -6,8 +6,6 @@ import { clerkClient } from '@clerk/nextjs'
 import { NextResponse } from 'next/server'
  
 export async function POST(req: Request) {
-
-  console.log("Received request with headers:", req.headers);
  
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET
@@ -31,7 +29,6 @@ export async function POST(req: Request) {
  
   // Get the body
   const payload = await req.json()
-  console.log("Received body:", payload);
 
   const body = JSON.stringify(payload);
  
@@ -57,10 +54,8 @@ export async function POST(req: Request) {
   // Get the ID and type
   const { id } = evt.data;
   const eventType = evt.type;
-  console.log("yo");
  
   if(eventType === 'user.created') {
-    console.log("Processing user.created event with data:", evt.data);
     const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
 
     const user = {
