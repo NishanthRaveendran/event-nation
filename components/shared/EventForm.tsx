@@ -59,7 +59,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
 
                     <FormField
                         control={form.control}
-                        name="categoryId"
+                        name="title"
                         render={({ field }) => (
                             <FormItem className="w-full">
                             <FormControl>
