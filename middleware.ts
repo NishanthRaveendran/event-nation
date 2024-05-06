@@ -10,7 +10,10 @@ export default authMiddleware({
         '/assets/images/dotted-pattern.png',
         '/assets/images/hero.png',
         '/favicon.ico',
-        '/assets/images/logo.svg'
+        '/assets/images/logo.svg',
+        '/assets/images/location.svg',
+        '/assets/images/calendar.svg',
+        '/assets/images/search.svg'
     ],
     ignoredRoutes: [
         '/api/webhook/clerk',
